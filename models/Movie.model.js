@@ -1,4 +1,3 @@
-const { __express } = require("hbs");
 const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
@@ -7,9 +6,8 @@ const movieSchema = new Schema({
     director: String,
     image: String,
     description: String,
-    showtimes: [{type: String}]
+    showtimes: [String]
 })
 
 
-const Movie = mongoose.model("Movie", movieSchema);
-module.export = Movie;
+module.exports = mongoose.model("Movie", movieSchema);

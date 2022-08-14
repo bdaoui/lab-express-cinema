@@ -1,3 +1,9 @@
+const express = require("express");
+const Movie = require("../models/Movie.model")
+const db = require("../db/index");
+const { Mongoose } = require("mongoose");
+const cookieParser = require("cookie-parser");
+
 // To insert in "seeds/movies.seed.js"
 
 const movies = [
@@ -84,5 +90,15 @@ const movies = [
   ];
   
   // Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
-  
-  // ... your code here
+  function seed(){
+    Movie.remove({}) // clean up old collection
+        .then(event =>{ 
+            Movie.create(movies) // create the movie list
+                .then(event =>{
+                    db.disconnect(status =>{ console.log("The server is closed now")})} // close up the connection
+                );
+    })
+
+  }
+
+  seed();

@@ -1,10 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const movie = require("../models/Movie.model");
+const Movie = require("../models/Movie.model");
 
 
-// router
-//     .get("/movies", (req, res, next) => {   
-//     Movie.render("movies", response)
+router.get("/", (req, res, next) => {   
+    console.log("This is rendering movies properly")
+    Movie.find()
+        .then( result =>{
+            res.render("movies", {result})
+        })    
+})
 
-// })
+
+module.exports = router;

@@ -1,0 +1,15 @@
+<h1>Ironhack Cinema</h1>
+<h2>Click on the movie to check the showtimes!</h2>
+
+<section id="gallery">
+    
+    {{#each result}}
+        <section class="gallery-item">
+            <img src="{{this.image}}" />
+            <h3>{{this.title}}</h3>
+        </section>
+
+    {{/each}}
+    
+
+</section>

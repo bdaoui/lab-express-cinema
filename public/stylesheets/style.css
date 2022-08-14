@@ -25,3 +25,14 @@ a {
   width: 20%;
   padding: 2%;
 }
+
+#gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery-item{
+  margin: 4%;
+  text-align: center;
+}

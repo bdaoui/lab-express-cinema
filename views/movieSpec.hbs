@@ -1,0 +1,13 @@
+
+<section id="movie-card">   
+    {{#each result}}
+        <img src="{{this.image}}"/>
+        <section class="movie-card-info">
+            <h2>{{this.title}}</h2>
+            <h3>{{this.director}}</h3>
+            <p>{{this.description}}</p>
+            <p>{{this.showtimes}}</p>
+            <a href="/movies">Go back</a>
+    {{/each}}
+    </section>
+</section>

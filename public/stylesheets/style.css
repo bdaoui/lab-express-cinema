@@ -26,6 +26,8 @@ a {
   padding: 2%;
 }
 
+/* Film Listing */ 
+
 #gallery{
   display: flex;
   flex-direction: row;
@@ -35,4 +37,16 @@ a {
 .gallery-item{
   margin: 4%;
   text-align: center;
+}
+
+/* Film Card */
+
+#movie-card{
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+}
+
+.movie-card-info{
+  padding: 0% 5%;
 }

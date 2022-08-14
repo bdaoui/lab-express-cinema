@@ -12,4 +12,15 @@ router.get("/", (req, res, next) => {
 })
 
 
+router.get("/:id", (req, res, next) =>{
+    const {id} = req.params;
+    
+    Movie.find({_id:id})
+        .then(result =>{
+            console.log(result)
+            res.render("movieSpec", {result})
+        })
+})
+
+
 module.exports = router;
